@@ -1,0 +1,15 @@
+FROM node:alpine
+
+ENV USER=
+ENV PASSWORD=
+ENV DOMAIN=
+ENV PERIOD=
+
+WORKDIR /bridge
+COPY ./src ./src
+COPY ./package.json ./
+COPY ./package-lock.json ./
+
+RUN npm ci --loglevel warn
+
+CMD ["npm","start"]
