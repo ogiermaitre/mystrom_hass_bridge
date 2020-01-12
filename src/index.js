@@ -98,12 +98,8 @@ const server = {
         {
             name: '/test',
             fun(req) {
-                //             curl -X GET \
-                // -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmMjAyM2Y4Mzc0NGI0MGJjYWY2NGE5OWU2YjQ0ODc2YyIsImlhdCI6MTU3ODc0NTk4MiwiZXhwIjoxODk0MTA1OTgyfQ.c0VhvP6pky1itDcGl29itOI2RGCnsCH_StN04Vs87Xs" \
-                // -H "Content-Type: application/json" \
-                // http://hassio.local:8123/api/mystrom?double=Button1
                 const { action, id } = req.query
-                const query = `http://${address}:8123/api/mystrom?${action}=Button${id}`
+                const query = `http://${address}/api/mystrom?${action}=Button${id}`
                 console.log(query)
                 return fetch(query, {
                     headers: {
