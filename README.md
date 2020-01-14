@@ -1,5 +1,3 @@
-mystrom_proxy
-
 ## Launching the bridge in a docker:
 Build a docker and run it, including some env variable (see above).
 The default docker file is for raspberry-pi, but you can use Dockerfile_x86 to use a mode standard docker image (nodejs).
