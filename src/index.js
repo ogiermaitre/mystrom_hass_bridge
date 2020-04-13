@@ -107,7 +107,7 @@ const server = {
                         'Content-Type': "application/json"
                     }
                 })
-                    .then(d => console.log(d))
+                    // .then(d => console.log(d))
             }
         }
     ],
